@@ -1,0 +1,13 @@
+.banner {
+  height: 5%;
+  width: 100%;
+  background: rgb(255, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.heading {
+  text-align: center;
+  position: relative;
+}
