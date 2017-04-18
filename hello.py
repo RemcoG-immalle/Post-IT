@@ -1,10 +1,29 @@
-from flask import Flask, render_template, url_for
-app = Flask(__name__)
+from flask import Flask,request
+from flaskext.mysql import MySQL
 
-@app.route('/')
-@app.route('/<wall>')
-def hello(wall=None):
-    return render_template('wall.html', wall=wall)
+mysql = MySQL()
+app = Flask(__name__)
+app.config['MYSQL_DATABASE_USER'] = 'post_user'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'imma'
+app.config['MYSQL_DATABASE_DB'] = 'Post_IT'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+mysql.init_app(app)
+
+@app.route("/")
+def hello():
+    return "Welcome to Python Flask App!"
+
+@app.route("/Register")
+def Authenticate():
+    username = request.args.get('Name')
+    password = request.args.get('Password')
+    cursor = mysql.connect().cursor()
+    cursor.execute("SELECT * from Users where Name='" + username + "' and Password='" + password + "'")
+    data = cursor.fetchone()
+    if data is None:
+     return "Username or Password is wrong"
+    else:
+     return "Logged in successfully"
 
 if __name__ == "__main__":
     app.run()
