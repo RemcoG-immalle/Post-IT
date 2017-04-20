@@ -6,6 +6,10 @@
   width: 100%;
   height: 7em;
   z-index: -1;
-  background-color: #f00;
+  background-color: #1C6847;
 }
-/* http://paletton.com/#uid=50u0A0kllpPs9W6p8ACfDgi9-5a */
+
+body {
+  background-color: #6EA990;
+}
+/* http://paletton.com/#uid=5330u0khgp75JIqbiuYnvj4ttdc */
