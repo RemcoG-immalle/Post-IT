@@ -40,6 +40,13 @@ body {
   text-align: center;
 }
 
+/* Content */
+
+p {
+  margin-top: 4em;
+  font-size: 2em;
+}
+
 /* http://paletton.com/#uid=5330u0khgp75JIqbiuYnvj4ttdc */
 
 /* Ribbon */
