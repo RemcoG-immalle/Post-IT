@@ -41,4 +41,23 @@ body {
 
 /* Content */
 
-/* http://paletton.com/#uid=5330u0khgp75JIqbiuYnvj4ttdc */
+#message_cont {
+
+}
+
+.post-header {
+  position: relative;
+  height: 1em;
+  width: 5em;
+  color: #BEB700;
+}
+
+.post-content {
+  position: relative;
+  height: 4em;
+  width: 5em;
+  color: #FFF500;
+}
+
+/* http://paletton.com/#uid=5330u0khgp75JIqbiuYnvj4ttdc --> Wall */
+/* --> Post IT */
