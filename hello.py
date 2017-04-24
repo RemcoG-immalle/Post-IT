@@ -25,6 +25,7 @@ def Authenticate():
      return "No Wall with this name found."
     else:
      return "Found wall and connected."
+     # return render_template("wall.html")
 
 if __name__ == "__main__":
     app.run()
