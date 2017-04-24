@@ -15,17 +15,16 @@ mysql.init_app(app)
 def hello():
     return render_template("home.html")
 
-#@app.route("/Register")
-#def Authenticate():
-#    username = request.args.get('Name')
-#    password = request.args.get('Password')
-#    cursor = mysql.connect().cursor()
-#    cursor.execute("SELECT * from Users where Name='" + username + "' and Password='" + password + "'")
-#    data = cursor.fetchone()
-#    if data is None:
-#     return "Username or Password is wrong"
-#    else:
-#     return "Logged in successfully"
+@app.route("/Wall")
+def Authenticate():
+    wallname = request.args.get('Name')
+    cursor = mysql.connect().cursor()
+    cursor.execute("SELECT * FROM Walls where wall_name='" + wallname + "'")
+    data = cursor.fetchone()
+    if data is None:
+     return "No Wall with this name found."
+    else:
+     return "Found wall and connected."
 
 if __name__ == "__main__":
     app.run()

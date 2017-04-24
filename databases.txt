@@ -25,6 +25,7 @@ Walls
 |   ColName   | Type    | Null   |  PK   |  Specials  |
 +-------------+---------+--------+-------+------------+
 |   id        | INT     | No     |  Yes  |  Auto Inc  |
+|   wall_name | VARCHAR | No     |  No   |            |
 |   user_id   | INT     | No     |  No   |            |
 |   theme     | VARCHAR | Yes    |  No   |            |
 +-------------+---------+--------+-------+------------+
