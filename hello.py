@@ -1,4 +1,4 @@
-from flask import Flask,request, redirect, url_for
+from flask import Flask,request, redirect, url_for, render_template
 from flaskext.mysql import MySQL
 
 mysql = MySQL()
@@ -13,7 +13,7 @@ mysql.init_app(app)
 @app.route("/home")
 @app.route("/Home")
 def hello():
-    return redirect(url_for('static', filename='index.html'))
+    return render_template("home.html")
 
 #@app.route("/Register")
 #def Authenticate():
